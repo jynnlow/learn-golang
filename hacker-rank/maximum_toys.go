@@ -1,13 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 )
-
-func main(){
-	fmt.Println(maximumToys([]int32{1, 12, 5, 111, 200, 1000, 10},50))
-}
 
 func maximumToys(prices []int32, k int32) int32 {
 	var itemCount int
@@ -15,7 +10,7 @@ func maximumToys(prices []int32, k int32) int32 {
 
 	prices = quicksort(prices)
 
-	for i := 0; i < len(prices); i++{
+	for i := 0; i < len(prices); i++ {
 		subtotal += prices[i]
 		if subtotal > k {
 			itemCount = i
@@ -51,4 +46,3 @@ func quicksort(a []int32) []int32 {
 
 	return a
 }
-

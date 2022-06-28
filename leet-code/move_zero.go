@@ -1,6 +1,6 @@
 package main
 
-func moveZero(nums []int) {
+func moveZero(nums []int) []int {
 	position := 0
 	nonZeroPtr := 0
 
@@ -18,4 +18,5 @@ func moveZero(nums []int) {
 		nums[position] = 0
 		position++
 	}
+	return nums
 }
